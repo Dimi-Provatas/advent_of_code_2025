@@ -2,6 +2,7 @@ mod util;
 
 mod day1;
 mod day2;
+mod day3;
 
 fn print_day(day: &str) {
     println!("-------------------------------------");
@@ -24,7 +25,9 @@ macro_rules! solve_day {
 }
 
 fn main() {
-    solve_day!(day1);
+    // solve_day!(day1);
 
-    solve_day!(day2);
+    // solve_day!(day2);
+
+    solve_day!(day3);
 }
