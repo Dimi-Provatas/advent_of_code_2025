@@ -1,5 +1,7 @@
 use std::fs;
 
+use crate::util::read_file;
+
 pub fn is_invalid_part1(x: usize) -> bool {
     let num_str = x.to_string();
 
@@ -43,7 +45,7 @@ pub fn is_invalid_part2(x: usize) -> bool {
 }
 
 pub fn parse_input(filename: &str) -> Vec<(usize, usize)> {
-    let input = fs::read_to_string(filename).expect("Unable to read file");
+    let input = read_file(filename).first().unwrap().to_owned();
 
     let mut ranges = vec![];
 

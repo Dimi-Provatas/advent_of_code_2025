@@ -1,11 +1,7 @@
-use std::fs;
+use crate::util::read_file;
 
 pub fn input_parser(filename: &str) -> Vec<(Action, u16)> {
-    let input: Vec<String> = fs::read_to_string(filename)
-        .expect("Unable to read file")
-        .lines()
-        .map(String::from)
-        .collect();
+    let input = read_file(filename);
 
     let mut sequence = Vec::new();
 
