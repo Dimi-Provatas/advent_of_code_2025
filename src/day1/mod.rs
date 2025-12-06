@@ -4,7 +4,7 @@ use util::{Action, input_parser};
 mod dial;
 mod util;
 
-pub fn solve_day1_part1(input: &str) -> u16 {
+pub fn part1(input: &str) -> u16 {
     let action_sequence = input_parser(input);
 
     let mut dial = Dial::new();
@@ -19,7 +19,7 @@ pub fn solve_day1_part1(input: &str) -> u16 {
     dial.solution
 }
 
-pub fn solve_day1_part2(input: &str) -> u16 {
+pub fn part2(input: &str) -> u16 {
     let action_sequence = input_parser(input);
 
     let mut dial = Dial::new();
