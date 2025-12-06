@@ -1,5 +1,3 @@
-use std::fs;
-
 use crate::util::read_file;
 
 pub fn is_invalid_part1(x: usize) -> bool {

@@ -16,8 +16,8 @@ pub fn part1(filename: &str) -> usize {
         let mut l_idx: usize = 0;
         let mut r_larger = 0;
 
-        for idx in 0..(char_len - 1) {
-            let current_char = chars[idx];
+        for (idx, current_char) in chars.iter().enumerate().take(char_len - 1) {
+            let current_char = *current_char;
             if current_char == 9 {
                 l_idx = idx;
                 l_larger = 9;
@@ -30,8 +30,8 @@ pub fn part1(filename: &str) -> usize {
             }
         }
 
-        for idx in (l_idx + 1)..char_len {
-            let current_char = chars[idx];
+        for current_char in chars.iter().take(char_len).skip(l_idx + 1) {
+            let current_char = *current_char;
             if current_char == 9 {
                 r_larger = 9;
                 break;
