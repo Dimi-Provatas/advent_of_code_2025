@@ -1,7 +1,7 @@
-use crate::util::read_file;
+use crate::util::read_file_to_lines;
 
 pub fn input_parser(filename: &str) -> Vec<(Action, u16)> {
-    let input = read_file(filename);
+    let input = read_file_to_lines(filename);
 
     let mut sequence = Vec::new();
 

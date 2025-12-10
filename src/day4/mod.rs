@@ -1,11 +1,11 @@
-use crate::util::read_file;
+use crate::util::read_file_to_lines;
 
 use util::{MapSymbol, parse_char_in_input};
 
 mod util;
 
 pub fn part1(filename: &str) -> usize {
-    let lines: Vec<Vec<MapSymbol>> = read_file(filename)
+    let lines: Vec<Vec<MapSymbol>> = read_file_to_lines(filename)
         .into_iter()
         .map(|line| {
             line.chars()
@@ -93,7 +93,7 @@ pub fn part1(filename: &str) -> usize {
 }
 
 pub fn part2(filename: &str) -> usize {
-    let mut lines: Vec<Vec<MapSymbol>> = read_file(filename)
+    let mut lines: Vec<Vec<MapSymbol>> = read_file_to_lines(filename)
         .into_iter()
         .map(|line| {
             line.chars()

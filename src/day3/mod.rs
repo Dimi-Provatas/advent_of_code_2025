@@ -1,7 +1,7 @@
-use crate::util::read_file;
+use crate::util::read_file_to_lines;
 
 pub fn part1(filename: &str) -> usize {
-    let input = read_file(filename);
+    let input = read_file_to_lines(filename);
 
     let mut res = 0;
 
@@ -51,7 +51,7 @@ pub fn part1(filename: &str) -> usize {
 }
 
 pub fn part2(filename: &str) -> usize {
-    let input = read_file(filename);
+    let input = read_file_to_lines(filename);
 
     let mut res = 0;
 

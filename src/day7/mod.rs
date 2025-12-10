@@ -1,9 +1,9 @@
 use std::collections::{HashMap, HashSet, VecDeque};
 
-use crate::util::read_file;
+use crate::util::read_file_to_lines;
 
 pub fn part1(filename: &str) -> usize {
-    let lines: Vec<Vec<String>> = read_file(filename)
+    let lines: Vec<Vec<String>> = read_file_to_lines(filename)
         .into_iter()
         .map(|line| -> Vec<String> { line.chars().map(String::from).collect() })
         .collect();
@@ -44,7 +44,7 @@ pub fn part1(filename: &str) -> usize {
 }
 
 pub fn part2(filename: &str) -> usize {
-    let lines: Vec<Vec<String>> = read_file(filename)
+    let lines: Vec<Vec<String>> = read_file_to_lines(filename)
         .into_iter()
         .map(|line| -> Vec<String> { line.chars().map(String::from).collect() })
         .collect();
