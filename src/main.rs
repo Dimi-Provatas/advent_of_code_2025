@@ -9,6 +9,7 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
 
 fn print_day(day: &str) {
     println!("-------------------------------------");
@@ -47,5 +48,7 @@ fn main() {
 
     // solve_day!(day8);
 
-    solve_day!(day9);
+    // solve_day!(day9);
+
+    solve_day!(day10);
 }
