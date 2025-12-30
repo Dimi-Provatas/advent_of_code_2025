@@ -1,3 +1,5 @@
+use std::time::Instant;
+
 mod util;
 
 mod day1;
@@ -14,7 +16,7 @@ mod day11;
 mod day12;
 
 fn print_day(day: &str) {
-    println!("-------------------------------------");
+    println!("\n-------------------------------------");
     let day = day.replace("day", "");
     println!("Day {day}\n");
 }
@@ -47,28 +49,36 @@ macro_rules! solve_day {
 }
 
 fn main() {
-    // solve_day!(day1);
+    let start = Instant::now();
 
-    // solve_day!(day2);
+    solve_day!(day1);
 
-    // solve_day!(day3);
+    solve_day!(day2);
 
-    // solve_day!(day4);
+    solve_day!(day3);
 
-    // solve_day!(day5);
+    solve_day!(day4);
 
-    // solve_day!(day6);
+    solve_day!(day5);
 
-    // solve_day!(day7);
+    solve_day!(day6);
 
-    // solve_day!(day8);
+    solve_day!(day7);
 
-    // solve_day!(day9);
+    solve_day!(day8);
 
-    // solve_day!(day10);
+    solve_day!(day9);
+
+    solve_day!(day10);
 
     // NOTE: Of course day 11 has 2 separate test inputs
-    // solve_day!(day11, separate_tests);
+    solve_day!(day11, separate_tests);
 
     solve_day!(day12);
+
+    println!("\n-------------------------------------");
+    println!(
+        "Total runtime for all solutions: {:.2}s",
+        start.elapsed().as_millis() as f64 / 1000f64
+    );
 }

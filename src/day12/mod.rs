@@ -1,8 +1,12 @@
+use std::sync::OnceLock;
+
 use util::parse_lines;
 
 use crate::util::read_file_to_lines;
 
 mod util;
+
+static HAS_PRINTED: OnceLock<bool> = OnceLock::new();
 
 pub fn part1(filename: &str) -> usize {
     let lines = read_file_to_lines(filename);
@@ -21,11 +25,10 @@ pub fn part1(filename: &str) -> usize {
     res
 }
 
-pub fn part2(filename: &str) -> usize {
-    let lines = read_file_to_lines(filename);
-    let (gifts, regions) = parse_lines(lines);
-
-    let mut res = 0;
-    todo!();
-    res
+pub fn part2(_filename: &str) -> usize {
+    if HAS_PRINTED.get().is_none() {
+        println!("\nDay 12 has no part 2");
+        HAS_PRINTED.set(true).unwrap();
+    }
+    0
 }

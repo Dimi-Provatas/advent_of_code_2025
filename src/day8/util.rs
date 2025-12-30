@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 pub fn get_distances_sorted(junctions: &Vec<Junction>) -> Vec<(usize, usize, usize)> {
     let mut distances: Vec<(usize, usize, usize)> = Vec::new();
 

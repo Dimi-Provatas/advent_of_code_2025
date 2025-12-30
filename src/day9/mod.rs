@@ -14,9 +14,7 @@ pub fn part1(filename: &str) -> usize {
     for i in 0..points.len() {
         let point_a = points[i].clone();
 
-        for j in i..points.len() {
-            let point_b = points[j].clone();
-
+        for point_b in points.iter().skip(i).cloned() {
             let x = point_a.x.abs_diff(point_b.x) + 1;
             let y = point_a.y.abs_diff(point_b.y) + 1;
 
@@ -41,9 +39,7 @@ pub fn part2(filename: &str) -> usize {
     for i in 0..points.len() {
         let point_a = points[i].clone();
 
-        for j in i..points.len() {
-            let point_b = points[j].clone();
-
+        for point_b in points.iter().skip(i).cloned() {
             if point_b == point_a {
                 continue;
             }
