@@ -4,7 +4,7 @@ All challenges solved with no external crates, only using `std`.
 
 ## Solutions
 
-Average runtime for all 12 days:
+Average total runtime for all 12 days:
 
 - Debug: 5 seconds
 - Release: 0.85 seconds
@@ -19,4 +19,4 @@ Can be used as:
 ```
 
 This will create all folders and files needed for a new day.
-I will also add the needed lines in main.rs.
+It will also add the needed lines in main.rs.
